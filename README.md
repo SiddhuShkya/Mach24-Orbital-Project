@@ -1,6 +1,7 @@
 # 🛰 Vegetation & Land Surface Temperature Monitoring System 🌿🔥
 
 > A geospatial analytics project that uses **satellite imagery** to analyze **vegetation health (NDVI)** and **land surface temperature (LST)** trends over time.  
+
 > This system detects **environmental changes** (e.g., greenness loss, warming trends) and provides **interactive BI dashboards** for visualization and exploration.
 
 ---

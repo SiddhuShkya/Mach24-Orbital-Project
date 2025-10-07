@@ -8,3 +8,6 @@ folium
 rasterstats
 scipy
 seaborn
+plotly
+statsmodels
+streamlit-option-menu
