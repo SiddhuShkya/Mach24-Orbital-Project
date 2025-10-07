@@ -1,14 +1,14 @@
 # 🛰 Vegetation & Land Surface Temperature Monitoring System 🌿🔥
 
-A geospatial analytics project that uses **satellite imagery** to analyze **vegetation health (NDVI)** and **land surface temperature (LST)** trends over time.  
-This system detects **environmental changes** (e.g., greenness loss, warming trends) and provides **interactive BI dashboards** for visualization and exploration.
+> A geospatial analytics project that uses **satellite imagery** to analyze **vegetation health (NDVI)** and **land surface temperature (LST)** trends over time.  
+> This system detects **environmental changes** (e.g., greenness loss, warming trends) and provides **interactive BI dashboards** for visualization and exploration.
 
 ---
 
 ## 📌 Project Overview
 
-This project is part of the **Mach24 Orbitals Technical Assessment (GIS & AI)**.  
-It focuses on analyzing **natural environments** using freely available satellite imagery and modern geospatial processing tools.
+> This project is part of the **Mach24 Orbitals Technical Assessment (GIS & AI)**.  
+> It focuses on analyzing **natural environments** using freely available satellite imagery and modern geospatial processing tools.
 
 ### ✨ Core Features
 
@@ -69,7 +69,7 @@ The satellite imagery used in this project was collected from the **[USGS Earth 
 
 ### 📁 Naming Convention For Landsat Collections Level-2 Scenes
 
-Each Landsat scene file follows a structured naming pattern that encodes key metadata about the satellite, acquisition, and processing details.
+> Each Landsat scene file follows a structured naming pattern that encodes key metadata about the satellite, acquisition, and processing details.
 
 Example : **`LC08_L2SP_141041_20220127_20220204_02_T1_SR_B4.TIF`**
 
@@ -88,7 +88,7 @@ Example : **`LC08_L2SP_141041_20220127_20220204_02_T1_SR_B4.TIF`**
 
 ## 📍 AOI (Area of Interest)
 
-Our AOI polygon covers a large region in central Nepal, primarily encompassing the Kathmandu Valley and its surrounding districts. Geographically, it spans from roughly 85.08°E to 85.74°E longitude and 27.49°N to 27.84°N latitude, which includes the cities of Kathmandu, Lalitpur, and Bhaktapur etc. This area represents a diverse landscape—ranging from dense urban settlements in the valley floor to agricultural fields, forested hills and natural environmental dynamics (vegetation, surface temperature variation) over time.
+> Our AOI polygon covers a large region in central Nepal, primarily encompassing the Kathmandu Valley and its surrounding districts. Geographically, it spans from roughly 85.08°E to 85.74°E longitude and 27.49°N to 27.84°N latitude, which includes the cities of Kathmandu, Lalitpur, and Bhaktapur etc. This area represents a diverse landscape—ranging from dense urban settlements in the valley floor to agricultural fields, forested hills and natural environmental dynamics (vegetation, surface temperature variation) over time.
 
 | ESRI Vector Map | ESRI World Imagery | 
 |:---------------:|:------------------:|
