@@ -11,3 +11,4 @@ seaborn
 plotly
 statsmodels
 streamlit-option-menu
+contextily
