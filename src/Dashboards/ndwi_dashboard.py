@@ -96,7 +96,7 @@ def plot_ndwi_heatmap_plotly(df: pd.DataFrame, width: int = 700, height: int = 3
 # --------------------------
 # Show Data Table
 # --------------------------
-def show_data(df: pd.DataFrame, width: int = 700, height: int = 450):
+def show_data(df: pd.DataFrame, width: int = 700, height: int = 460):
     show_cols = ["date", "NDWI_mean", "NDWI_std"]
     st.write(":blue[NDWI Data]")
     st.dataframe(df[show_cols], width=width, height=height)
@@ -168,7 +168,7 @@ def render_aoi_map(
 # --------------------------
 # NDWI Line Chart
 # --------------------------
-def plot_ndwi(df: pd.DataFrame, show_var: bool):
+def plot_ndwi(df: pd.DataFrame, show_var: bool, width: int = 900, height: int = 460):
     df = df.copy()
     df["date"] = pd.to_datetime(df["date"])
     df = df.sort_values("date")
@@ -212,6 +212,8 @@ def plot_ndwi(df: pd.DataFrame, show_var: bool):
         margin=dict(l=40, r=40, t=60, b=40),
         xaxis=dict(showline=True, linewidth=1, linecolor="black"),
         yaxis=dict(showline=True, linewidth=1, linecolor="black"),
+        width=width,
+        height=height,
     )
     st.write(":blue[NDWI Mean Over Time]")
     st.plotly_chart(fig, use_container_width=True)

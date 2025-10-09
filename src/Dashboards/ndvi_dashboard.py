@@ -109,7 +109,7 @@ def plot_ndvi_heatmap_plotly(df: pd.DataFrame, width: int = 700, height: int = 3
 # --------------------------
 # Show Data Table
 # --------------------------
-def show_data(df: pd.DataFrame, width: int = 700, height: int = 450):
+def show_data(df: pd.DataFrame, width: int = 700, height: int = 460):
     show_cols = ["date", "NDVI_mean", "NDVI_std"]
     st.write(":green[NDVI Data]")
     st.dataframe(df[show_cols], width=width, height=height)
@@ -119,7 +119,7 @@ def show_data(df: pd.DataFrame, width: int = 700, height: int = 450):
 # AOI Map
 # --------------------------
 def render_aoi_map(
-    aoi_json: dict, width: int = 600, height: int = 440, map_type: str = "standard"
+    aoi_json: dict, width: int = 700, height: int = 440, map_type: str = "standard"
 ):
     """
     Render AOI map with selectable basemap type.
@@ -181,7 +181,7 @@ def render_aoi_map(
 # --------------------------
 # NDVI Line Chart
 # --------------------------
-def plot_ndvi(df: pd.DataFrame, show_var: bool):
+def plot_ndvi(df: pd.DataFrame, show_var: bool, width: int = 900, height: int = 460):
     df = df.copy()
     df["date"] = pd.to_datetime(df["date"])
     df = df.sort_values("date")
@@ -223,8 +223,10 @@ def plot_ndvi(df: pd.DataFrame, show_var: bool):
         template="plotly_white",
         hovermode="x unified",
         margin=dict(l=40, r=40, t=60, b=40),
-        xaxis=dict(showline=True, linewidth=1, linecolor="black"),
-        yaxis=dict(showline=True, linewidth=1, linecolor="black"),
+        xaxis=dict(showline=True, linewidth=1, linecolor="white"),
+        yaxis=dict(showline=True, linewidth=1, linecolor="white"),
+        width=width,
+        height=height,
     )
     st.write(":green[NDVI Mean Over Time]")
     st.plotly_chart(fig, use_container_width=True)
