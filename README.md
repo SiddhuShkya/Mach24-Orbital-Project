@@ -1,4 +1,4 @@
-## 🛰️ LandScape Insight: NDVI, NDWI, NDBI & LST Monitoring
+## 🛰️ LandScape Insight : NDVI, NDWI, NDBI & LST Monitoring
 
 > A geospatial analytics project that uses **Landsat satellite imagery from USGS** to analyze **vegetation health (NDVI)**, **water content (NDWI)**, **built-up areas (NDBI)**, and **land surface temperature (LST)** trends over time.  
 
@@ -6,12 +6,12 @@
 
 ---
 
-## 📌 Project Overview
+### 📌 Project Overview
 
 > This project is part of the **Mach24 Orbitals Technical Assessment (GIS & AI)**.  
 > It focuses on analyzing **natural and urban environments** using freely available **Landsat imagery (USGS)** and modern geospatial processing tools.
 
-### ✨ Core Features
+#### ✨ Core Features
 
 - ✅ **NDVI Computation** – Detect vegetation greenness trends using Red & NIR bands.  
 - 💧 **NDWI Computation** – Monitor water content and seasonal variations using NIR & SWIR bands.  
@@ -24,7 +24,7 @@
 
 ---
 
-## 🛠️ Technology Stack
+### 🛠️ Technology Stack
 
 - **Python** – Core programming language  
 - **Streamlit** – Interactive dashboards  
@@ -35,7 +35,7 @@
 
 ---
 
-## 🖼️ Dashboard Screenshots
+### 🖼️ Dashboard Screenshots
 
 Here are some snapshots of the interactive dashboards:
 
