@@ -141,6 +141,30 @@ http://localhost:8501/
 
 ---
 
+## 🐳 Run with Docker (Alternative Method)
+
+### **1. Build the Docker Image**
+
+```bash
+sudo docker build -t mach24-orbital-project .
+```
+
+### **2. Run the Docker Container**
+
+```bash
+sudo docker run -p 8501:8501 mach24-orbital-project
+```
+
+### **3. Access the Dashboard**
+
+```bash
+http://0.0.0.0:8501/
+```
+
+> The Streamlit app will start automatically inside the Docker container and serve on port 8501.
+
+---
+
 ## 🙌 Acknowledgements
 
 - **`USGS Earth Explorer`**  → For providing Landsat 8/9 satellite data.
