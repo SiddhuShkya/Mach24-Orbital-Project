@@ -42,6 +42,51 @@
 
 ---
 
+## 📂 Repo Structure
+
+```
+📂 Mach24-Orbital-Project/
+├── 📂 data
+│   ├── 📂 2022        # Contains Landsat band files (.TIF)
+│   ├── 📂 2023        # Contains Landsat band files (.TIF)
+│   ├── 📂 2024        # Contains selected processed data
+│   ├── 📄 all-landsat-data.csv   # Combined dataset for all years
+│   └── 📄 aoi.geojson            # Area of Interest polygon
+├── 📂 docs
+│   ├── 📄 data-source.md          # Info about data sources (USGS, AOI, etc.)
+│   └── 📄 task.md                 # Description of project tasks/workflow
+├── 📂 images
+│   ├── 📂 AOI                     # AOI maps
+│   ├── 📂 COMBINED_PLOTS          # Correlation plots
+│   ├── 📂 LST_PLOTS               # Land Surface Temperature plots
+│   ├── 📂 NDBI_PLOTS              # Built-up index plots
+│   ├── 📂 NDVI_PLOTS              # Vegetation index plots
+│   ├── 📂 NDWI_PLOTS              # Water index plots
+│   ├── 📂 SCREENSHOTS             # Screenshots of intermediate results
+│   └── 📂 USGS                    # USGS platform screenshots
+├── 📂 notebooks
+│   ├── 📂 Data-Analysis
+│   │   ├── 📄 Land-Surface-Temperature.ipynb       # LST analysis
+│   │   ├── 📄 Normalized-Difference-Builtup-Index.ipynb  # NDBI analysis
+│   │   ├── 📄 Normalized-Difference-Vegetation-Index.ipynb  # NDVI analysis
+│   │   └── 📄 Normalized-Difference-Water-Index.ipynb      # NDWI analysis
+│   ├── 📄 Data-Extraction.ipynb    # Data extraction workflows
+│   ├── 📄 Data-Understanding.ipynb # Exploratory data analysis
+│   └── 📄 Data-Visualization.ipynb # Plotting and visual insights
+├── 📄 README.md                    # Project overview
+├── 📄 requirements.txt             # Python dependencies
+└── 📂 src
+    ├── 📂 Dashboards
+    │   ├── 📄 lst_dashboard.py    # LST dashboard
+    │   ├── 📄 ndbi_dashboard.py   # NDBI dashboard
+    │   ├── 📄 ndvi_dashboard.py   # NDVI dashboard
+    │   └── 📄 ndwi_dashboard.py   # NDWI dashboard
+    ├── 📄 data_loader.py          # Code to load and preprocess data
+    └── 📄 main.py                 # Main application entry
+```
+
+---
+
 ### 🖼️ Dashboard Screenshots
 
 Here are some snapshots of the interactive dashboards:
