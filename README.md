@@ -28,14 +28,17 @@
 
 ---
 
-### 🛠️ Technology Stack
+## 🛠️ Technology Stack
 
-- **Python** – Core programming language  
-- **Streamlit** – Interactive dashboards  
-- **Pandas & NumPy** – Data wrangling and computation  
-- **GeoPandas & Folium** – Geospatial data processing and mapping  
-- **Plotly & Altair** – Interactive charts and heatmaps  
-- **USGS Landsat 8** – Satellite imagery source  
+| Category | Tools |
+|-----------|-------|
+| **Programming** | Python 3.9+ |
+| **Framework** | Streamlit |
+| **Data Analysis** | Pandas, NumPy |
+| **Geospatial** | GeoPandas, Folium |
+| **Visualization** | Plotly, Altair, Matplotlib |
+| **Data Source** | USGS Landsat 8/9 Collection 2 |
+| **Environment** | Virtualenv / venv |
 
 ---
 
@@ -51,4 +54,56 @@ Here are some snapshots of the interactive dashboards:
 |---------------------|---------------|
 | ![NDBI](images/SCREENSHOTS/ndbi.png) | ![LST](images/SCREENSHOTS/lst.png) |
 
+---
 
+## 🧭 How to Run the Project ?
+
+Follow these steps to set up and launch the **LandScape Insight Dashboard** locally:
+
+### **1. Clone the Repository**
+
+```bash
+git clone https://github.com/SiddhuShkya/Mach24-Orbital-Project.git
+cd Mach24-Orbital-Project
+```
+
+### **2. Create a Virtual Environment**
+
+```bash
+python3 -m venv venv
+source venv/bin/activate     # On Windows: venv\Scripts\activate
+```
+
+### **3. Install Dependencies**
+
+```bash
+pip install -r requirements.txt
+```
+
+### **4. Go inside /src Directory**
+
+```bash
+cd src
+```
+
+### **5. Run the Dashboard**
+
+```bash
+streamlit run main.py
+```
+
+### **6. Access the Dashboard**
+
+```bash
+http://localhost:8501/
+```
+
+> You’ll see the full dashboard with tabs for NDVI, NDWI, NDBI, and LST — each with charts, maps, and insights.
+
+---
+
+## 🙌 Acknowledgements
+
+- **`USGS Earth Explorer`**  → For providing Landsat 8/9 satellite data.
+- **`Mach24 Orbitals`**  → For the GIS & AI technical assessment framework.
+- **`Streamlit Community`**  → For enabling interactive data visualization.
