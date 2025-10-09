@@ -125,19 +125,13 @@ source venv/bin/activate     # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### **4. Go inside /src Directory**
+### **4. Run the Dashboard**
 
 ```bash
-cd src
+streamlit run src/main.py
 ```
 
-### **5. Run the Dashboard**
-
-```bash
-streamlit run main.py
-```
-
-### **6. Access the Dashboard**
+### **5. Access the Dashboard**
 
 ```bash
 http://localhost:8501/

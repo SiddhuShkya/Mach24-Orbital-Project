@@ -1,9 +1,12 @@
+import os
 import geopandas as gpd
 import pandas as pd
 import streamlit as st
 
-AOI_PATH = "../data/aoi.geojson"
-DATA_PATH = "../data/all-landsat-data.csv"
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # /app/src
+AOI_PATH = os.path.join(BASE_DIR, "..", "data", "aoi.geojson")
+DATA_PATH = os.path.join(BASE_DIR, "..", "data", "all-landsat-data.csv")
 
 
 def load_aoi_data():
@@ -18,6 +21,6 @@ def load_aoi_data():
 
 @st.cache_data
 def load_data():
-    data = pd.read_csv("../data/all-landsat-data.csv")
+    data = pd.read_csv(DATA_PATH)
     data["date"] = pd.to_datetime(data["date"])
     return data
