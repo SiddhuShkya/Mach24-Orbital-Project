@@ -35,5 +35,15 @@
 
 ---
 
+## 🖼️ Dashboard Screenshots
+
+Here are some snapshots of the interactive dashboards:
+
+| NDVI Dashboard Overview | NDWI Dashboard Overview |
+|---------------------|---------------|
+| ![NDVI](images/SCREENSHOTS/ndvi.png) | ![NDWI](images/SCREENSHOTS/ndwi.png) |
+| NDBI Dashboard Overview | LST Dashboard Overview |
+|---------------------|---------------|
+| ![NDBI](images/SCREENSHOTS/ndbi.png) | ![LST](images/SCREENSHOTS/lst.png) |
 
 
