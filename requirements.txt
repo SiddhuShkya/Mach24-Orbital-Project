@@ -12,3 +12,6 @@ plotly
 statsmodels
 streamlit-option-menu
 contextily
+dash
+dash-leaflet
+dash_table
