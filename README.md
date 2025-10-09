@@ -1,4 +1,4 @@
-# 🛰️ LandScape Insight: NDVI, NDWI, NDBI & LST Monitoring
+## 🛰️ LandScape Insight: NDVI, NDWI, NDBI & LST Monitoring
 
 > A geospatial analytics project that uses **Landsat satellite imagery from USGS** to analyze **vegetation health (NDVI)**, **water content (NDWI)**, **built-up areas (NDBI)**, and **land surface temperature (LST)** trends over time.  
 
