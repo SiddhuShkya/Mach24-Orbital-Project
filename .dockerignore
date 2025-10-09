@@ -1,0 +1,13 @@
+venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.swp
+.git
+notebooks
+docs
+data/2022
+data/2023
+data/2024
+README.md
