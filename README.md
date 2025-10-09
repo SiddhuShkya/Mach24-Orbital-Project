@@ -11,6 +11,10 @@
 > This project is part of the **Mach24 Orbitals Technical Assessment (GIS & AI)**.  
 > It focuses on analyzing **natural and urban environments** using freely available **Landsat imagery (USGS)** and modern geospatial processing tools.
 
+#### 📸 Homepage Screenshot
+
+![NDVI](images/SCREENSHOTS/ndvi.png)
+
 #### ✨ Core Features
 
 - ✅ **NDVI Computation** – Detect vegetation greenness trends using Red & NIR bands.  
