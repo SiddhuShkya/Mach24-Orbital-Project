@@ -30,7 +30,7 @@
 
 --- 
 
-## 📸 Homepage Screenshot
+## 📸 Screenshot
 
 ![NDVI](images/SCREENSHOTS/ndvi.png)
 
