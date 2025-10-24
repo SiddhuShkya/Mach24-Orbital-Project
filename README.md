@@ -28,9 +28,13 @@
 - Uses thermal bands from Landsat
 - Monitors warming trends and heat patterns
 
-### 📸 Homepage Screenshot
+--- 
+
+## 📸 Homepage Screenshot
 
 ![NDVI](images/SCREENSHOTS/ndvi.png)
+
+--- 
 
 ## 🛠️ Technology Stack
 
