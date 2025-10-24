@@ -1,32 +1,36 @@
-## 🛰️ LandScape Insight : NDVI, NDWI, NDBI & LST Monitoring
+## 🛰️ Mach24-Orbital-Project : NDVI, NDWI, NDBI & LST Monitoring
 
-> A geospatial analytics project that uses **Landsat satellite imagery from USGS** to analyze **vegetation health (NDVI)**, **water content (NDWI)**, **built-up areas (NDBI)**, and **land surface temperature (LST)** trends over time.  
-
-> This system detects **environmental changes** (e.g., greenness loss, urban expansion, warming trends) and provides **interactive dashboards** for visualization and exploration.
+> A geospatial analytics project that uses **Landsat satellite imagery from USGS** to analyze **vegetation health (NDVI)**, **water content (NDWI)**, **built-up areas (NDBI)**, and **land surface temperature (LST)** trends over time. This system detects **environmental changes** (e.g., greenness loss, urban expansion, warming trends) and provides **interactive dashboards** for visualization and exploration.
 
 ---
 
-### 📌 Project Overview
+### 📌 What It Does
 
-> This project is part of the **Mach24 Orbitals Technical Assessment (GIS & AI)**.  
-> It focuses on analyzing **natural and urban environments** using freely available **Landsat imagery (USGS)** and modern geospatial processing tools.
+> The project analyzes satellite data to track environmental changes by computing four key indices:
 
-#### 📸 Homepage Screenshot
+#### 🌿 **NDVI (Normalized Difference Vegetation Index)**
+- Measures vegetation health and greenness
+- Uses Red and Near-Infrared (NIR) bands
+- Detects vegetation loss or growth trends
+
+#### 💧 **NDWI (Normalized Difference Water Index)**
+- Monitors water content and seasonal variations
+- Uses NIR and Short-Wave Infrared (SWIR) bands
+- Tracks water body changes over time
+
+#### 🏙️ **NDBI (Normalized Difference Built-up Index)**
+- Identifies urban development and built-up areas
+- Uses SWIR and NIR bands
+- Detects urban expansion patterns
+
+#### 🌡️ **LST (Land Surface Temperature)**
+- Analyzes land surface temperature changes
+- Uses thermal bands from Landsat
+- Monitors warming trends and heat patterns
+
+### 📸 Homepage Screenshot
 
 ![NDVI](images/SCREENSHOTS/ndvi.png)
-
-#### ✨ Core Features
-
-- ✅ **NDVI Computation** – Detect vegetation greenness trends using Red & NIR bands.  
-- 💧 **NDWI Computation** – Monitor water content and seasonal variations using NIR & SWIR bands.  
-- 🏙 **NDBI Computation** – Identify built-up areas using SWIR & NIR bands.  
-- 🌡 **LST Analysis** – Monitor land surface temperature changes using thermal bands.  
-- 📊 **Time Series & Trend Detection** – Monthly & yearly analysis of changes for all indices.  
-- 🗺 **Interactive Dashboard** – Streamlit app with maps, charts, metrics, and summary statistics.  
-- 🟢 **AOI Mapping** – Visualize Areas of Interest with selectable basemaps (OSM / Satellite).  
-- 📈 **Seasonal Heatmaps** – NDVI, NDWI, NDBI, and LST heatmaps for trend analysis.  
-
----
 
 ## 🛠️ Technology Stack
 
@@ -39,6 +43,18 @@
 | **Visualization** | Plotly, Altair, Matplotlib |
 | **Data Source** | USGS Landsat 8/9 Collection 2 |
 | **Environment** | Virtualenv / venv |
+
+---
+
+## 🔥 Key Features
+
+- ✅ **Multi-Index Analysis** – NDVI, NDWI, NDBI, and LST computation
+- 📊 **Time Series Analysis** – Monthly and yearly trend detection (2022-2024)
+- 🗺️ **Interactive Maps** – Folium-based maps with standard and satellite views
+- 📈 **Data Visualization** – Charts, heatmaps, and correlation plots
+- 🎯 **AOI Mapping** – Customizable Area of Interest visualization
+- 🔄 **Year Filtering** – Multi-select year filtering for comparative analysis
+- 📉 **Variability Toggle** – Show/hide data variability in visualizations
 
 ---
 
@@ -170,3 +186,9 @@ http://0.0.0.0:8501/
 - **`USGS Earth Explorer`**  → For providing Landsat 8/9 satellite data.
 - **`Mach24 Orbitals`**  → For the GIS & AI technical assessment framework.
 - **`Streamlit Community`**  → For enabling interactive data visualization.
+
+---
+
+## 👨🏻‍💻 Author
+
+Siddhartha Shakya
