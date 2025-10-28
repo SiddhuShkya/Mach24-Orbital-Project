@@ -142,7 +142,7 @@ def render_aoi_map(
         aoi_json,
         name="AOI",
         style_function=lambda x: {
-            "color": "#4CAF50",
+            "color": "#0627BB",
             "weight": 3,
             "opacity": 0.7,
         },
