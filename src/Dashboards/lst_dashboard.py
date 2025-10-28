@@ -230,9 +230,18 @@ def lst(data, selected_years, show_var, map_view):
         years_text = " - ".join(str(y) for y in selected_years)
 
     st.markdown(
-        f"<h1 style='text-align: center; margin-top: -40px;'>🌡️ Land Surface Temperature ({years_text})</h1>",
+        f"""
+        <h1 style='
+            text-align: center;
+            margin-top: -40px;
+            font-family: "Times New Roman", Times, serif;
+        '>
+            🌡️ Land Surface <span style="color: red;">Temperature</span> ({years_text})
+        </h1>
+        """,
         unsafe_allow_html=True,
     )
+
     st.write("---")
 
     aoi_json = json.loads(load_aoi_data())
