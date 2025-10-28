@@ -106,7 +106,7 @@ def show_data(df: pd.DataFrame, width: int = 700, height: int = 460):
 # AOI Map
 # --------------------------
 def render_aoi_map(
-    aoi_json: dict, width: int = 600, height: int = 440, map_type: str = "standard"
+    aoi_json: dict, width: int = 700, height: int = 440, map_type: str = "standard"
 ):
     """
     Render AOI map with selectable basemap type.
