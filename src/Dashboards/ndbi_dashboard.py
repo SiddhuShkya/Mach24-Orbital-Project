@@ -161,7 +161,7 @@ def render_aoi_map(
         unsafe_allow_html=True,
     )
 
-    st.write(":green[Area of Interest (AOI)]")
+    st.write(":orange[Area of Interest (AOI)]")
     st_folium(m, width=width, height=height)
 
 
