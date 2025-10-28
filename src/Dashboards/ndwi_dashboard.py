@@ -225,7 +225,7 @@ def plot_ndwi(df: pd.DataFrame, show_var: bool, width: int = 900, height: int = 
 def ndwi(data, selected_years, show_var, map_view):
     df = data
     if not selected_years or set(selected_years) == {2022, 2023, 2024}:
-        years_text = "2022 - 2023"
+        years_text = "2022 - 2024"
     else:
         years_text = " - ".join(str(y) for y in selected_years)
 

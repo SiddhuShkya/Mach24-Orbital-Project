@@ -39,7 +39,7 @@ def main():
 
         # Sidebar radio to toggle variability
         show_var = st.radio("Show Variability?", ["Yes", "No"]) == "Yes"
-
+        print(selected_years)
     # Routing
     if selected == "NDVI":
         ndvi(
