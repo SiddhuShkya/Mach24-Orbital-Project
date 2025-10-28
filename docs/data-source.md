@@ -1,6 +1,6 @@
-## 🛰 Data Source/Dircetory
+## 🛰️ Data Source/Dircetory
 
-The satellite imagery used in this project was collected from the **[USGS Earth Explorer](https://earthexplorer.usgs.gov/)** platform.  
+> The satellite imagery used in this project was collected from the **[USGS Earth Explorer](https://earthexplorer.usgs.gov/)** platform.  
 
 **Screenshot:**
 
@@ -9,15 +9,30 @@ The satellite imagery used in this project was collected from the **[USGS Earth 
 
 > Specifically, **Landsat 8/9 Collection 2** data was downloaded for the selected **Area of Interest (AOI)**. The following bands were used:
 
-**Acquisition Details:**
+---
 
-- **Timeline:** 2020 – 2025  
+## 📍 AOI (Area of Interest)
+
+> Our AOI polygon covers a large region in central Nepal, primarily encompassing the Kathmandu Valley and its surrounding districts. Geographically, it spans from roughly 85.08°E to 85.74°E longitude and 27.49°N to 27.84°N latitude, which includes the cities of Kathmandu, Lalitpur, and Bhaktapur etc. This area represents a diverse landscape—ranging from dense urban settlements in the valley floor to agricultural fields, forested hills and natural environmental dynamics (vegetation, surface temperature variation) over time.
+
+| ESRI Vector Map | ESRI World Imagery | 
+|:---------------:|:------------------:|
+| <img src="../images/AOI/aoi_esri_vector_map.png" alt="AOI ESRI Vector Map" width="500"/> | <img src="../images/AOI/aoi_esri_world_imagery.png" alt="AOI ESRI World Imagery" width="500"/> | 
+
+---
+
+## 💾 Acquisition Details
+
+- **Timeline:** 2022 – 2024  
 - **Cloud Cover Range:** 0 – 15%  
 - **Bands Used:**
   - **B4** – Red  
   - **B5** – Near Infrared (NIR)  
-  - **B10 / B11** – Thermal Infrared (for LST computation)  
-- **MTL Metadata:** Included for accurate temperature calibration during **Land Surface Temperature (LST)** analysis.
+  - **B6 / B7** – Shortwave Infrared (SWIR, for NDBI and NDWI computation)  
+  - **B10 / B11** – Thermal Infrared (for **Land Surface Temperature (LST)** computation)  
+- **MTL Metadata:** Included for accurate calibration during LST computation.
+
+--- 
 
 ### 📁 Repository Structure
 
@@ -46,6 +61,8 @@ The satellite imagery used in this project was collected from the **[USGS Earth 
 │   └── aoi.geojson
 ```
 
+---
+
 ### 📁 Naming Convention For Landsat Collections Level-2 Scenes
 
 > Each Landsat scene file follows a structured naming pattern that encodes key metadata about the satellite, acquisition, and processing details.
@@ -65,13 +82,37 @@ Example : **`LC08_L2SP_141041_20220127_20220204_02_T1_SR_B4.TIF`**
 | Band ID | B1 / B2 / B3 ... B10 | Indicates specific spectral band (B10 = Thermal Infrared) |
 | File Extension | .TIF / .txt | GeoTIFF for imagery, .txt for metadata |
 
-## 📍 AOI (Area of Interest)
+---
 
-> Our AOI polygon covers a large region in central Nepal, primarily encompassing the Kathmandu Valley and its surrounding districts. Geographically, it spans from roughly 85.08°E to 85.74°E longitude and 27.49°N to 27.84°N latitude, which includes the cities of Kathmandu, Lalitpur, and Bhaktapur etc. This area represents a diverse landscape—ranging from dense urban settlements in the valley floor to agricultural fields, forested hills and natural environmental dynamics (vegetation, surface temperature variation) over time.
+## 📈 Analysis Performed
 
-| ESRI Vector Map | ESRI World Imagery | 
-|:---------------:|:------------------:|
-| <img src="../images/AOI/aoi_esri_vector_map.png" alt="AOI ESRI Vector Map" width="500"/> | <img src="../images/AOI/aoi_esri_world_imagery.png" alt="AOI ESRI World Imagery" width="500"/> | 
+- **NDVI (Normalized Difference Vegetation Index):** Computed from NIR and Red bands to assess vegetation health.  
+- **NDWI (Normalized Difference Water Index):** Computed from NIR and SWIR bands to detect water bodies.  
+- **NDBI (Normalized Difference Built-up Index):** Computed from SWIR and NIR bands to identify urban and built-up areas.  
+- **LST (Land Surface Temperature):** Computed from thermal band (B10) to assess surface temperature in Celsius using calibrated metadata.
+
+---
+
+## 📐 Computation Formulas and Their Purpose
+
+- **NDVI (Normalized Difference Vegetation Index)**  
+  - **Formula:** `NDVI = (NIR - Red) / (NIR + Red)`  
+  - **Purpose:** Measures vegetation health and density. Values range from -1 to 1, where higher values indicate healthy, dense vegetation.
+
+- **NDWI (Normalized Difference Water Index)**  
+  - **Formula:** `NDWI = (NIR - SWIR) / (NIR + SWIR)`  
+  - **Purpose:** Detects water bodies and moisture content in vegetation. Higher NDWI values indicate presence of water.
+
+- **NDBI (Normalized Difference Built-up Index)**  
+  - **Formula:** `NDBI = (SWIR - NIR) / (SWIR + NIR)`  
+  - **Purpose:** Identifies urban and built-up areas. Higher values indicate more built-up or impervious surfaces.
+
+- **LST (Land Surface Temperature in °C)**  
+  - **Formula:** `LST = (B10 × mult + add) - 273.15`  
+  where `mult = 0.00341802` and `add = 149.0`  
+  - **Purpose:** Converts the satellite thermal band (B10) to surface temperature in Celsius. Used to study heat distribution, urban heat islands, and thermal patterns.
+
+---
 
 ### 🗺️ `aoi.geojson`
 > The file aoi.geojson (Area of Interest) defines the geographic boundary within which all satellite image analyses—such as NDVI > (vegetation) and LST (land surface temperature)
@@ -97,3 +138,5 @@ Example : **`LC08_L2SP_141041_20220127_20220204_02_T1_SR_B4.TIF`**
   ]
 }
 ```
+
+---
